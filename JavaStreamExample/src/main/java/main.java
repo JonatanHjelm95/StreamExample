@@ -15,8 +15,7 @@ public class main {
         for (int i = 0; i < 1000; i++) {
             integerList.add(r.nextInt(1000));
         }
-        long skip = 300;
-        List<Integer> sortedList = integerList.stream().skip(skip).sorted().collect(Collectors.toList());
+        List<Integer> sortedList = integerList.stream().distinct().sorted().collect(Collectors.toList());
         for (int i = 0; i < sortedList.size(); i++) {
             System.out.println(sortedList.get(i));
         }
